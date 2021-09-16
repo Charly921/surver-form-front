@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-image: url("https://venngage-wordpress.s3.amazonaws.com/uploads/2016/04/survey.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;    
+    padding: 0 10px;
+    color: white;
+}
+
+.wrapper {
+    max-width: 650px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 30px;
+    box-shadow: 2px 2px 4px rgba(31, 8, 8, 0.15);
+    border-radius: 10px;
+    background: rgba(9, 103, 116, 0.9);
+}
+
+.wrapper .title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+#description {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form {
+    width: 100%;
+}
+
+.form .input_field {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.input_field p {
+    padding-right: 0.5rem;
+}
+
+.label {
+    width: 120px;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.input, .textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid #d5dbd9;
+    font-size: 1.2rem;
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    color: #444;
+}
+.textarea {
+    resize: none;
+}
+.custom_select {
+    position: relative;
+    width: 100%;
+    height: 37px;
+}
+.custom_select select {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #d5dbd9;
+    width: 100%;
+    height: 100%;
+    padding: 8px 10px;
+    border-radius: 3px;
+    outline: none;
+    font-size: 1.2rem;
+    color: #444;
+}
+.custom_select::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    border: 8px solid;
+    border-color: #d5dbd9 transparent transparent;
+    pointer-events: none;
+}
+
+.input:focus, .textarea:focus, select:focus {
+    border: 1px solid rgb(117, 199, 236);
+}
+
+.check {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin-right: 2.5rem;
+}
+
+input[type="checkbox"], [type="radio"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked ~ .checkmark,
+input[type="radio"]:checked ~ .checkmark {
+    background: #fff;
+}
+input[type="checkbox"]:checked ~ .checkmark::before,
+input[type="radio"]:checked ~ .checkmark::before {
+    display: block;
+}
+
+.checkmark {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fff;
+    display: block;
+    position: relative;
+}
+
+.checkmark::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 5px;
+    height: 2px;
+    border: 2px solid;
+    border-color: transparent transparent rgba(9, 103, 116, 0.9) rgba(9, 103, 116, 0.9);
+    transform: rotate(-45deg);
+    display: none;
+}
+
+.submit {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: 0;
+    background: white;
+    color: rgb(9, 103, 116);
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+}
+.input_field:last-child {
+    margin-bottom: 0;
+}
+
+.submit:hover {
+    background: rgba(117, 199, 236, 0.95);
+    color: white;
+}
+
+@media (max-width: 420px) {
+    .input_field {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .label {
+        margin-bottom: 0.5rem;
+    }
+    .row {
+        flex-direction: row;
+    }
+}
